@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main {
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.notepad-div {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  border:solid gray;
+  border-right-width: 2px;
+  margin-right: 25px;
+  height: 700px;
+  overflow-y: scroll;
+}
+
+
+
+
+.right-block-div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+}
+
+.todo-div {
+  border: solid gray;
+  border-width: 1px;
+  flex: 1;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+
+.add-task-form {
+  display: flex;
+  align-items: center;
+}
+
+.add-task-form__input {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.add-task-form__button {
+  font-size: 1.2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-task-form__button:hover {
+  background-color: white;
+  color: black;
+}
+
+.task-list {
+  padding-left: 0;
+}
+
+.task-list__item {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+
+.task-list__delete-button {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.task-list__delete-button:hover {
+  background-color: white;
+  color: red;
+}
+
+.no-task-message {
+  display: none;
+  text-align: center;
+  font-size: 1.2rem;
+}
+

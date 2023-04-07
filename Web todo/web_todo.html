@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="md-editor/simplemde.min.css" />
+    <link rel="stylesheet" href="timer-styles.css">
+    <style>
+      .editor-container {
+        height: 600px !important;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    
+
+    <header class="header">
+      <h1 class="header__title">Productivity</h1>
+    </header>
+
+    <main class="main">
+      <div class="grid">
+
+        <div class="notepad-div" >
+          
+          <div id="editor-container">
+            <textarea id="editor"></textarea>
+          </div>
+          <script src="md-editor/simplemde.min.js"></script>
+          <script>
+            var simplemde = new SimpleMDE({
+              element: document.getElementById("editor")
+            });
+          </script>
+
+        </div>
+        
+        
+
+
+        <div class="right-block-div">
+
+          <div class="timer-div" >
+            <h1 class="heading">Timer</h1>
+            
+            <div class="timer-container">
+                <h2 id="timer">00:00</h2>
+            </div>
+        
+            <div class="input-container">
+                <input type="number" id="timer-input" placeholder="Enter time in minutes" min="1">
+                <button id="start-btn">Start</button>
+                <button id="stop-btn">Stop</button>
+            </div>
+        
+        </div>
+        <script src="timer-script.js"></script>
+          
+          <div class="todo-div">
+
+            <form class="add-task-form">
+              <input
+                type="text"
+                class="add-task-form__input"
+                placeholder="Add Task..."
+              />
+              <button type="submit" class="add-task-form__button">Add</button>
+            </form>
+      
+            <p class="no-task-message">
+              No tasks
+            </p>
+      
+            <ul class="task-list"></ul>
+          </div>
+
+        </div>
+        
+
+      </div>
+       
+    </main>
+          
+        
+
+        
+
+    <script src="editor.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>
+
